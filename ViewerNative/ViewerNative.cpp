@@ -169,14 +169,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		}
 	}
 	break;
-	case WM_PAINT:
-	{
-		//PAINTSTRUCT ps;
-		//HDC hdc = BeginPaint(hWnd, &ps);
-		//// TODO: Add any drawing code that uses hdc here...
-		//EndPaint(hWnd, &ps);
-	}
-	break;
 	case WM_ERASEBKGND:
 	{
 		// Don't draw any background because we have the WPF control
