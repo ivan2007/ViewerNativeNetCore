@@ -56,7 +56,14 @@ namespace ViewerWpf
 
         public HwndSource HwndSource { get; private set; }
 
+        public HwndSource HwndSource1 { get; private set; }
+
         private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            return IntPtr.Zero;
+        }
+
+        private IntPtr WndProc1(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             return IntPtr.Zero;
         }
@@ -67,6 +74,7 @@ namespace ViewerWpf
             {
                 if (disposing)
                 {
+                    _userControlWpf.Dispose();
                     HwndSource?.Dispose();
                 }
 
